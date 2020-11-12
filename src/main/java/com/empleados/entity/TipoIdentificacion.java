@@ -18,13 +18,16 @@ public class TipoIdentificacion {
 	private int id;
 	@Column(nullable = false)
 	private String nombreTipo;
-	@OneToMany(mappedBy = "tipoId",fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "tipoIdentificacion")
 	private List<Empleado>empleados;
 	
 	public TipoIdentificacion(String nombreTipo, List<Empleado> empleados) {
 		super();
 		this.nombreTipo = nombreTipo;
 		this.empleados = empleados;
+	}
+	public TipoIdentificacion() {
+		
 	}
 
 	public int getId() {

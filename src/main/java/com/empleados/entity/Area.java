@@ -17,13 +17,16 @@ public class Area {
 	private int id;
 	
 	private String nombre;
-	@OneToMany(mappedBy = "area",cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "area")
 	private List<Empleado>empleados;
 	
 	public Area(String nombre, List<Empleado> empleados) {
 		super();
 		this.nombre = nombre;
 		this.empleados = empleados;
+	}
+	public Area() {
+		
 	}
 
 	public int getId() {

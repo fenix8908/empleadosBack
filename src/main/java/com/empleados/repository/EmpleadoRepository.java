@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import com.empleados.entity.Empleado;
-import com.tutorial.crud.entity.Producto;
+
 
 @Repository
 public interface EmpleadoRepository extends JpaRepository<Empleado, Integer> {
@@ -16,4 +16,5 @@ public interface EmpleadoRepository extends JpaRepository<Empleado, Integer> {
 	
 	Optional<Empleado> findByDocumento(String documento);
     boolean existsByDocumento(String documento);
+    boolean existsByCorreo(String correo);
 }

@@ -55,4 +55,8 @@ public class EmpleadoService {
 	public boolean existePorDocumento(String documento) {
 		return empleadoRepository.existsByDocumento(documento);
 	}
+	public boolean existePorCorreo(String correo) {
+		return empleadoRepository.existsByCorreo(correo);
+	}
+
 }
